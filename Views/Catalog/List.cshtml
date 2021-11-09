@@ -1,0 +1,9 @@
+@model IEnumerable<Catalog>
+@foreach (var catalog in Model)
+{
+  <div>
+    <h3>@catalog.nume @catalog.prenume</h3>
+    @catalog.marca
+    <h4>Note: @catalog.nota1,@catalog.nota2</h4>
+  </div>
+}
