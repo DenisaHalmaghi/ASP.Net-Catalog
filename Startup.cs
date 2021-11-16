@@ -60,7 +60,7 @@ namespace mobile
       {
         endpoints.MapControllerRoute(
                   name: "default",
-                  pattern: "{controller=Catalog}/{action=List}/{id?}");
+                  pattern: "{controller=Catalog}/{action=Index}/{id?}");
       });
       SeedData.EnsurePopulated(app);
       // app.UseMvc(routes =>

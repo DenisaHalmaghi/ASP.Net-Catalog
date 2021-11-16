@@ -10,10 +10,10 @@ namespace mobile.Models
     public static void EnsurePopulated(IApplicationBuilder app)
     {
 
-      var scopeeee = app.ApplicationServices.CreateScope();
-      ApplicationDbContext context = scopeeee.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-      // ApplicationDbContext context = app.ApplicationServices
-      // .GetRequiredService<ApplicationDbContext>();
+      // var scopeeee = app.ApplicationServices.CreateScope();
+      // ApplicationDbContext context = scopeeee.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+      ApplicationDbContext context = app.ApplicationServices
+      .GetRequiredService<ApplicationDbContext>();
       context.Database.Migrate();
       if (!context.Catalogs.Any())
       {
